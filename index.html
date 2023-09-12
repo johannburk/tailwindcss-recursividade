@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://cdn.tailwind.com"></script>
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-800">
+    <main class="max-w-4xl mx-auto">
+        <section id="ola"
+        class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-mt-40">
+        <article class="sm:w-1/2">
+            <h2
+                class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900 dark:text-white">
+                Olá visitante <span class="text-indigo-700 dark:text-indigo-300">essa página</span> foi criada com tailwind css
+            </h2>
+            <p class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
+                Projeto criado para aprender a como criar menu recursivo com tailwind 
+            </p>
+            <p class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
+                Até mais
+            </p>
+        </article>
+        <img class="w-1/2" src="./img/kisspng-symbol-pictogram-clip-art-image-hello-5b62055b6ef1b8.4502543315331505554544.jpg" alt="Rocket Dab">
+    </section>
+
+    </main>
+
+    <nav class="bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="a" class="flex-shrink-0">
+                        <img class="h-8 w-8 rounded-full" src="./img/png-transparent-github-social-media-computer-icons-logo-android-github-logo-computer-wallpaper-banner-thumbnail.png" alt="logo menu">
+                    </a>
+                    <div class="hidden sd:block">
+                    <div class="ml-10 flex item space-x-4">
+                        <a href="#" class="hover:bg-gray-700 text-white px-3 py-2 rounded-nd text-sm font-medium transition duration-300 ease-in-out">Home</a>
+                        <a href="#" class="hover:bg-gray-700 text-white px-3 py-2 rounded-nd text-sm font-medium transition duration-300 ease-in-out">Sobre</a>
+                        <a href="#" class="hover:bg-gray-700 text-white px-3 py-2 rounded-nd text-sm font-medium transition duration-300 ease-in-out">Contato</a>
+                    </div>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button id="menuButton" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white transition duration-300 ease-in-out" arial-label="Menu" aria-expanded="false" >
+                        <sgv class="h-6 n-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </sgv>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pd-3 sm:px-3">
+                <a href="a" class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="a" class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
+                <a href="a" class="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Contato</a>
+
+            </div>
+        </div>
+    </nav>
+
+<script>
+    const btn = document.getElementById("menuButton")
+    const menu = document.getElementById("menu")
+
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden")
+    })
+</script>
+
+</body>
